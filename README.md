@@ -1,75 +1,60 @@
-# React + TypeScript + Vite
+# Music School Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A role-based dashboard for managing a music school, built with **React, TypeScript and Vite**. This is a personal project inspired by the kind of workflows used in music school management software. It uses only my own sample data.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + TypeScript (strict mode)
+- Vite
+- ESLint
+- Redux Toolkit (state management)
+- React Router (routing)
+- Jest + React Testing Library (tests)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [ ] Role-based access: School, Teacher, Student and Parent dashboards
+- [ ] Protected routes by role
+- [ ] Student, teacher and recital lists with Active / Inactive tabs
+- [ ] Search with debounce and pagination
+- [ ] Course and enrollment management
+- [ ] Loading, error and empty states for every list
+- [ ] Unit tests for key components
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/Subbareddy-8185/music-school-dashboard.git
+cd music-school-dashboard
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Then open the local URL shown in the terminal (usually http://localhost:5173).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Useful scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Type-check and build for production |
+| `npm run lint` | Run ESLint |
+
+## Project structure
 
 ```
+src/
+  components/   reusable UI components
+  pages/        screens for each role
+  hooks/        custom hooks (e.g. useDebounce)
+  types/        shared TypeScript types
+```
+
+## Status
+
+Work in progress. I'm building this to practice TypeScript with React, role-based routing, and state management.
+
+## Author
+
+**Subbareddy Gopireddy** – React.js Developer
+[LinkedIn](https://linkedin.com/in/subbareddy8185) | gopireddysubba@gmail.com
