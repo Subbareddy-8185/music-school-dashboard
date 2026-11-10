@@ -1,0 +1,12 @@
+import type { Student } from "../types";
+
+export const initialStudents: Student[] = [
+  { id: 1, name: "Arun Kumar", email: "arun@example.com", city: "Bengaluru", isActive: true },
+  { id: 2, name: "Meena Rao", email: "meena@example.com", city: "Chennai", isActive: true },
+  { id: 3, name: "Ravi Teja", email: "ravi@example.com", city: "Hyderabad", isActive: true },
+  { id: 4, name: "Sneha Reddy", email: "sneha@example.com", city: "Nellore", isActive: false },
+  { id: 5, name: "Kiran Babu", email: "kiran@example.com", city: "Bengaluru", isActive: true },
+  { id: 6, name: "Divya Lakshmi", email: "divya@example.com", city: "Tirupati", isActive: false },
+  { id: 7, name: "Vikram Singh", email: "vikram@example.com", city: "Hyderabad", isActive: true },
+  { id: 8, name: "Anjali Nair", email: "anjali@example.com", city: "Kochi", isActive: true },
+];
