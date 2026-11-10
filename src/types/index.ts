@@ -2,7 +2,7 @@
 
 export type Role = "School" | "Teacher" | "Student" | "Parent";
 
-export type StStatusTab = "Active" | "Inactive";
+export type StatusTab = "Active" | "Inactive";
 
 export interface Student {
   id: number;
